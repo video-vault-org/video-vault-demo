@@ -43,7 +43,12 @@ const Archive = function () {
           <button onClick={() => setAccount(true)}>{t('Mein Konto', 'My account')}</button>
           <button onClick={() => setManagement(true)}>{t('Benutzerverwaltung', 'User management')}</button>
           <span className="nav-spacer" />
-          <button onClick={() => setNotice(t('Die Demo verwendet die mitgelieferte Anzeige-Konfiguration.', 'The demo uses its bundled display settings.'))}>{t('Anzeige-Konfiguration neu laden', 'Reload display settings')}</button>
+          <button
+            onClick={() => setNotice(t('Die Demo verwendet die mitgelieferte Anzeige-Konfiguration.', 'The demo uses its bundled display settings.'))}
+            title={t('Aktuelle Einstellungen für Titel, Logos, Meta-Felder, Filter und Sortierung vom Server laden', 'Load the latest settings for the title, logos, metadata fields, filters and sorting from the server')}
+          >
+            {t('Anzeige-Einstellungen aktualisieren', 'Refresh display settings')}
+          </button>
         </nav>
         <section className="filter-bar" aria-label={t('Suche und Filter', 'Search and filters')}>
           <label className="search">
